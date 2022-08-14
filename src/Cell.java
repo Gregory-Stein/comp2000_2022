@@ -1,17 +1,16 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.Rectangle;
 
-public class Cell {
+public class Cell extends Rectangle {
   // fields
-  int x;
-  int y;
+
   static int size = 35;
 
   // constructors
   public Cell(int inX, int inY) {
-    x = inX;
-    y = inY;
+    super(inX, inY, size, size);
   }
 
   // methods
