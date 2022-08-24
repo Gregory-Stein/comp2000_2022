@@ -11,9 +11,8 @@ public class Cell extends Rectangle {
   // constructors
   public Cell(int inX, int inY) {
     super(inX, inY, size, size);
-  }
+=
 
-  // methods
   public void paint(Graphics g, Point mousePos) {
     if(contains(mousePos)) {
       g.setColor(Color.GRAY);
@@ -27,7 +26,7 @@ public class Cell extends Rectangle {
 
   public boolean contains(Point p) {
     if(p != null) {
-      return x < p.x && x+size > p.x && y < p.y && y+size > p.y;
+      return super.contains(p);
     } else {
       return false;
     }

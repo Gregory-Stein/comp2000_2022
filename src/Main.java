@@ -21,15 +21,16 @@ public class Main extends JFrame {
       @Override
       public void paint(Graphics g) {
         stage.paint(g, getMousePosition());
+      }
     }
 
-    private Main() {
-      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      Canvas canvas = new Canvas();
-      this.setContentPane(canvas);
-      this.pack();
-      this.setVisible(true);
-    }
+    // private Main() {
+    //   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //   Canvas canvas = new Canvas();
+    //   this.setContentPane(canvas);
+    //   this.pack();
+    //   this.setVisible(true);
+    // }
 
     public void run() {
       while(true) {
