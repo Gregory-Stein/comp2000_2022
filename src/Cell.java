@@ -7,11 +7,16 @@ public class Cell extends Rectangle {
   // fields
 
   static int size = 35;
+  char col;
+  int row;
 
-  // constructors
-  public Cell(int inX, int inY) {
-    super(inX, inY, size, size);
-=
+
+  public Cell(char inCol, int inRow, int x, int y) {
+    super(x, y, size, size);
+    col = inCol;
+    row = inRow;
+  }
+
 
   public void paint(Graphics g, Point mousePos) {
     if(contains(mousePos)) {
@@ -24,6 +29,7 @@ public class Cell extends Rectangle {
     g.drawRect(x, y, size, size);
   }
 
+  @Override
   public boolean contains(Point p) {
     if(p != null) {
       return super.contains(p);

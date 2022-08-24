@@ -1,11 +1,13 @@
 import java.awt.Color;
 import java.awt.Polygon;
 import java.util.ArrayList;
+
 public class Dog extends Actor {
   public Dog(Cell inLoc) {
     loc = inLoc;
     color = Color.YELLOW;
-    ArrayList<Polygon> polys = new ArrayList<Polygon>();
+
+    display = new ArrayList<Polygon>();
 
     Polygon ear1 = new Polygon();
     ear1.addPoint(loc.x + 5, loc.y + 5);
@@ -21,9 +23,8 @@ public class Dog extends Actor {
     face.addPoint(loc.x + 27, loc.y + 25);
     face.addPoint(loc.x + 8, loc.y + 25);
 
-    polys.add(ear1);
-    polys.add(ear2);
-    polys.add(face);
-
+    display.add(face);
+    display.add(ear1);
+    display.add(ear2);
   }
 }

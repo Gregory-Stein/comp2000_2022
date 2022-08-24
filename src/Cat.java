@@ -6,7 +6,8 @@ public class Cat extends Actor {
   public Cat(Cell inLoc) {
     loc = inLoc;
     color = Color.BLUE;
-    ArrayList<Polygon> polys = new ArrayList<Polygon>();
+
+    display = new ArrayList<Polygon>();
 
     Polygon ear1 = new Polygon();
     ear1.addPoint(loc.x + 11, loc.y + 5);
@@ -21,9 +22,8 @@ public class Cat extends Actor {
     face.addPoint(loc.x + 29, loc.y + 15);
     face.addPoint(loc.x + 17, loc.y + 30);
 
-    polys.add(ear1);
-    polys.add(ear2);
-    polys.add(face);
-
+    display.add(face);
+    display.add(ear1);
+    display.add(ear2);
   }
 }
