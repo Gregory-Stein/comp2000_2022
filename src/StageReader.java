@@ -9,6 +9,9 @@ import java.util.regex.Pattern;
 public class StageReader {
   public static Stage readStage(String path) throws IOException {
     Stage stage = new Stage();
+
+//Put below code into a try block to catch the exception. Also likely to record the exception. Or at least just the props.load line.
+
     Properties props = (new Properties());
     props.load(new FileInputStream(path));
     for(String key: props.stringPropertyNames()) {

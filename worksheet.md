@@ -201,6 +201,8 @@ Add the following method to the `Grid` class
      */
     public void doToEachCell(Consumer<Cell> func) {
       // Your job to add the body
+      
+      //Greg here: Okay, so, there's a double-nested loop in Grid which is used to highlight the mouse position. I got essentially make a function which takes the grid and the task and then applies the function to every cell in the grid. Basically we're just moving the double nested loop of the grid elsewhere. We're using a lambda function to apply choose what function we want to use on every cell.
     }
 ~~~~~
 
